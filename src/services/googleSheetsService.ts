@@ -10,7 +10,7 @@ export interface GoogleSheetsResponse {
 }
 
 // TODO: Replace with your Google Apps Script Web App URL
-const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGHlgahTpY0q36I9GgwZbxKDo7H9d9ZMN3QfRlOi2MwCW-IcdRUnzJK44dXsSpp5CImQ/exec';
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwpW-GbLMqojth0o3NE75DQsPAfxzvdXvP1TBr60PllbmiWW6oS9S4SozzJGlvURMJOQg/exec';
 
 /**
  * Submit form data to Google Sheets
