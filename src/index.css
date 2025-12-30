@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* QPT Culture Pulse Design System - Premium, animated, character-driven */
+
+@layer base {
+  :root {
+    /* Dark theme - premium and clean */
+    --background: 240 10% 8%;
+    --foreground: 240 5% 90%;
+    
+    --card: 240 10% 12%;
+    --card-foreground: 240 5% 90%;
+    
+    --popover: 240 10% 12%;
+    --popover-foreground: 240 5% 90%;
+    
+    /* White Primary, Maroon Secondary Theme */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 50% 20%;
+    --primary-glow: 0 0% 95%;
+    
+    --secondary: 0 50% 30%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 4% 65%;
+    
+    --accent: 240 8% 16%;
+    --accent-foreground: 240 5% 90%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 240 5% 96%;
+    --positive: 142 72% 40%;
+    --positive-foreground: 0 0% 100%;
+    
+    --border: 240 8% 20%;
+    --input: 240 8% 16%;
+    --ring: 0 50% 40%;
+    
+    /* Gradients - Dark theme glass effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card) / 0.8), hsl(var(--card) / 0.4));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.08));
+    --gradient-glass: linear-gradient(145deg, hsl(var(--card) / 0.9), hsl(var(--card) / 0.5));
+    
+    /* Shadows & Effects - Dark glass morphism */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.25);
+
+    /* Character Palettes */
+    --builder-primary: 217 91% 65%;
+    --builder-secondary: 220 15% 25%;
+    --builder-accent: 217 91% 75%;
+    
+    --challenger-primary: 25 95% 60%;
+    --challenger-secondary: 45 15% 25%;
+    --challenger-accent: 45 95% 70%;
+    
+    --sage-primary: 155 65% 50%;
+    --sage-secondary: 280 15% 25%;
+    --sage-accent: 155 65% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 240 5% 90%;
+    --sidebar-primary-foreground: 240 10% 8%;
+    --sidebar-accent: 240 8% 16%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 8% 20%;
+    --sidebar-ring: 217.2 91.2% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground font-sans;
+    background-image: url('https://c.tenor.com/erbfpVT0mPUAAAAC/red-and-black-red.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* Force all headers to white in both themes */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white !important;
+  }
+}
+
+@layer components {
+  /* Premium Glass Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105 backdrop-blur-md;
+  }
+  
+  .btn-ghost {
+    @apply bg-gradient-glass text-accent-foreground px-6 py-3 rounded-lg font-medium border border-border/50 hover:bg-accent/70 hover:shadow-glass transition-all duration-200 backdrop-blur-md;
+  }
+  
+  .btn-character {
+    @apply relative p-6 rounded-2xl border border-border/50 bg-gradient-glass hover:border-primary/50 transition-all duration-300 hover:shadow-glass hover:scale-105 backdrop-blur-lg;
+  }
+  
+  /* Glass Card Variants */
+  .card-premium {
+    @apply bg-gradient-to-r from-primary/10 to-primary-glow/10 border border-primary/20 rounded-xl p-6 shadow-glass hover:shadow-elegant transition-all duration-300 hover:scale-[1.02] backdrop-blur-lg;
+  }
+  
+  .card-section {
+    background: linear-gradient(to right, hsl(var(--primary) / 0.08), hsl(var(--primary-glow) / 0.08));
+    @apply border border-primary/15 rounded-xl p-5 transition-all duration-200 cursor-pointer backdrop-blur-md;
+  }
+  
+  .card-section:hover {
+    background: linear-gradient(to right, hsl(var(--primary) / 0.12), hsl(var(--primary-glow) / 0.12));
+  }
+
+  .card-subtle {
+    background: linear-gradient(to right, hsl(var(--primary) / 0.06), hsl(var(--primary-glow) / 0.06));
+    @apply border border-primary/10 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-200 backdrop-blur-sm;
+  }
+  
+  /* Glass Effects */
+  .glass-panel {
+    @apply bg-gradient-glass border border-border/50 backdrop-blur-lg shadow-glass;
+  }
+  
+  .glass-button {
+    @apply bg-gradient-glass border border-border/50 backdrop-blur-md hover:bg-accent/50 transition-all duration-200;
+  }
+  
+  /* Animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  
+  /* Privacy Toggle */
+  .privacy-toggle {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-accent/30 hover:bg-accent/50 transition-all duration-200;
+  }
+  
+  /* Character Theme Classes */
+  .theme-builder {
+    --primary: var(--builder-primary);
+    --primary-glow: var(--builder-accent);
+  }
+  
+  .theme-challenger {
+    --primary: var(--challenger-primary);
+    --primary-glow: var(--challenger-accent);
+  }
+  
+  .theme-sage {
+    --primary: var(--sage-primary);
+    --primary-glow: var(--sage-accent);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
