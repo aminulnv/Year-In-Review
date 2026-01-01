@@ -24,4 +24,5 @@ export const teammates: Teammate[] = [
   { id: "sheikh-mohammed-fahim", name: "Fahim", sprite: "https://i.postimg.cc/T3XgTCfW/Fahim.png" },
   { id: "aminul", name: "Aminul", sprite: "https://i.postimg.cc/pXjKNgbH/Aminul.png" },
   { id: "tajrian-rahman", name: "Tajrian", sprite: "https://i.postimg.cc/mgNpQmwQ/Tajrian.png" },
+  { id: "ifti", name: "Ifti", sprite: "https://i.postimg.cc/FFCmdWXV/Chat-GPT-Image-Jan-1-2026-10-29-05-AM.png" },
 ];

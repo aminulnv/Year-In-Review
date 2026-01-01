@@ -238,16 +238,16 @@ const Feedback: React.FC = () => {
           </p>
         </header>
 
-        {/* Anonymity Banner */}
+                  {/* Anonymity Banner */}
         <div className="mb-8 p-4 rounded-lg bg-positive/10 border border-positive/20 max-w-4xl mx-auto">
-          <div className="flex items-center gap-2 text-positive">
-            <Shield className="w-5 h-5" />
+                    <div className="flex items-center gap-2 text-positive">
+                      <Shield className="w-5 h-5" />
             <span className="font-semibold">🔒 Your feedback is anonymous.</span>
-          </div>
-          <p className="text-sm text-muted-foreground mt-1">
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-1">
             Individual responses are never shared. Scores and themes are combined before being reviewed.
-          </p>
-        </div>
+                    </p>
+                  </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Leader Selection */}
@@ -305,7 +305,7 @@ const Feedback: React.FC = () => {
                           <AvatarImage src={leader.sprite} alt={leader.name} />
                           <AvatarFallback>{leader.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <div>
+                  <div>
                           <h3 className="font-semibold text-lg">{leader.name}</h3>
                           {leader.role && <p className="text-sm text-muted-foreground">{leader.role}</p>}
                         </div>
@@ -374,7 +374,7 @@ const Feedback: React.FC = () => {
                             placeholder="Additional context or examples..."
                             className="min-h-[120px] resize-none"
                           />
-                        </div>
+                  </div>
 
                         {/* Stop Keep Start (optional) */}
                         <div>
@@ -382,7 +382,7 @@ const Feedback: React.FC = () => {
                           <div className="grid md:grid-cols-3 gap-4">
                             <div>
                               <label className="text-sm font-medium mb-1 block text-destructive">Stop</label>
-                              <Textarea
+                              <Textarea 
                                 value={stopKeepStart.stop}
                                 onChange={(e) => updateStopKeepStart(leaderId, 'stop', e.target.value)}
                                 placeholder="What should stop... (optional)"
@@ -391,7 +391,7 @@ const Feedback: React.FC = () => {
                             </div>
                             <div>
                               <label className="text-sm font-medium mb-1 block text-positive">Keep Doing</label>
-                              <Textarea
+                              <Textarea 
                                 value={stopKeepStart.keep}
                                 onChange={(e) => updateStopKeepStart(leaderId, 'keep', e.target.value)}
                                 placeholder="What should continue... (optional)"
@@ -400,7 +400,7 @@ const Feedback: React.FC = () => {
                             </div>
                             <div>
                               <label className="text-sm font-medium mb-1 block text-primary">Start</label>
-                              <Textarea
+                              <Textarea 
                                 value={stopKeepStart.start}
                                 onChange={(e) => updateStopKeepStart(leaderId, 'start', e.target.value)}
                                 placeholder="What should begin... (optional)"
@@ -408,34 +408,34 @@ const Feedback: React.FC = () => {
                               />
                             </div>
                           </div>
-                        </div>
-                      </div>
+                    </div>
+                  </div>
                     )}
-                  </Card>
-                );
-              })}
+          </Card>
+                   );
+                 })}
             </div>
           )}
 
           {/* Navigation */}
-          <div className="flex justify-between mt-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-            <Link to="/shoutouts">
-              <Button variant="outline" className="btn-ghost">
-                ← Back to Shoutouts
-              </Button>
-            </Link>
-            {isFormValid() ? (
-              <Link to="/culture-protection">
-                <Button className="btn-hero">
-                  Continue → Culture Protection
-                </Button>
-              </Link>
-            ) : (
-              <Button className="btn-hero" disabled>
-                Continue → Culture Protection
-                <span className="ml-2 text-xs">(Complete required fields)</span>
-              </Button>
-            )}
+        <div className="flex justify-between mt-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <Link to="/shoutouts">
+            <Button variant="outline" className="btn-ghost">
+              ← Back to Shoutouts
+            </Button>
+          </Link>
+           {isFormValid() ? (
+             <Link to="/culture-protection">
+               <Button className="btn-hero">
+                 Continue → Culture Protection
+               </Button>
+             </Link>
+           ) : (
+             <Button className="btn-hero" disabled>
+               Continue → Culture Protection
+               <span className="ml-2 text-xs">(Complete required fields)</span>
+             </Button>
+           )}
           </div>
         </div>
       </main>

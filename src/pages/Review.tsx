@@ -66,13 +66,13 @@ const Review = () => {
       // Then submit to Google Sheets
       const sheetsResult = await submitToGoogleSheets(formData);
       
-      // Store completion status
-      localStorage.setItem('qpt-pulse-completed', 'true');
-      localStorage.setItem('qpt-pulse-completion-date', new Date().toISOString());
+        // Store completion status
+        localStorage.setItem('qpt-pulse-completed', 'true');
+        localStorage.setItem('qpt-pulse-completion-date', new Date().toISOString());
       if (localResult.submissionId) {
         localStorage.setItem('qpt-submission-id', localResult.submissionId);
       }
-      
+        
       if (sheetsResult.success) {
         toast({
           title: "Success! 🎉",
@@ -351,7 +351,7 @@ const Review = () => {
                                   className="text-xs"
                                 >
                                   {leader.name} {leader.role && `(${leader.role})`}
-                                </Badge>
+                        </Badge>
                                 <span className="text-muted-foreground">
                                   {ratingCount}/10 questions
                                   {avgRating && ` • Avg: ${avgRating}/10`}

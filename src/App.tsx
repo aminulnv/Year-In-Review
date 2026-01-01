@@ -37,30 +37,30 @@ const App = () => (
             {/* Global overlay for readability */}
             <div className="fixed inset-0 bg-background/80 backdrop-blur-sm pointer-events-none" style={{ zIndex: 0 }} />
             <div className="relative" style={{ zIndex: 1 }}>
-              <BrowserRouter>
-                <Routes>
-                  <Route path="/" element={<Landing />} />
-                  <Route path="/wins" element={<Wins />} />
-                  <Route path="/blockers" element={<Blockers />} />
-                  <Route path="/culture-pulse" element={<CulturePulse />} />
-                  <Route path="/shoutouts" element={<Shoutouts />} />
-                  <Route path="/feedback" element={<Feedback />} />
-                  <Route path="/culture-protection" element={<CultureProtection />} />
-                  <Route path="/review" element={<Review />} />
-                  <Route path="/success" element={<Success />} />
-                  <Route path="/year-in-review" element={<YearInReview />} />
-                  <Route path="/year-in-review/wins" element={<YearInReviewWins />} />
-                  <Route path="/year-in-review/blockers" element={<YearInReviewBlockers />} />
-                  <Route path="/year-in-review/wish-more" element={<YearInReviewWishMore />} />
-                  <Route path="/year-in-review/pulse" element={<YearInReviewPulse />} />
-                  <Route path="/year-in-review/people" element={<YearInReviewPeople />} />
-                  <Route path="/year-in-review/leadership" element={<YearInReviewLeadership />} />
-                  <Route path="/year-in-review/review" element={<YearInReviewReview />} />
-                  <Route path="/year-in-review/success" element={<YearInReviewSuccess />} />
-                  <Route path="*" element={<NotFound />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                </Routes>
-              </BrowserRouter>
+          <BrowserRouter>
+          <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/wins" element={<Wins />} />
+            <Route path="/blockers" element={<Blockers />} />
+            <Route path="/culture-pulse" element={<CulturePulse />} />
+            <Route path="/shoutouts" element={<Shoutouts />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/culture-protection" element={<CultureProtection />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/year-in-review" element={<YearInReview />} />
+            <Route path="/year-in-review/wins" element={<YearInReviewWins />} />
+            <Route path="/year-in-review/blockers" element={<YearInReviewBlockers />} />
+            <Route path="/year-in-review/wish-more" element={<YearInReviewWishMore />} />
+            <Route path="/year-in-review/pulse" element={<YearInReviewPulse />} />
+            <Route path="/year-in-review/people" element={<YearInReviewPeople />} />
+            <Route path="/year-in-review/leadership" element={<YearInReviewLeadership />} />
+            <Route path="/year-in-review/review" element={<YearInReviewReview />} />
+            <Route path="/year-in-review/success" element={<YearInReviewSuccess />} />
+            <Route path="*" element={<NotFound />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          </Routes>
+          </BrowserRouter>
             </div>
           </div>
         </TooltipProvider>
